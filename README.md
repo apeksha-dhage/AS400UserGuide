@@ -2,7 +2,7 @@
 
 Steps to launch AMI:
 
-Click on Launch instances&rarr;enter name (e.g. CommonAPI)&rarr;Select AMI from marketplace & Instance type&rarr;Click on create new key pair&rarr;In security group allow access to port 8080&rarr;Finally click on launch instance.
+Login to AWS account&rarr;Click on Launch instances&rarr;enter name (e.g. CommonAPI)&rarr;Select AMI from marketplace & Instance type&rarr;Click on create new key pair&rarr;In security group allow access to port 8080&rarr;Finally click on launch instance.
 
 
 # Introduction
