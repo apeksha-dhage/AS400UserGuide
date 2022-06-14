@@ -159,16 +159,9 @@ AWS user account with appropriate roles for managing EC2 instances, AWS API Gate
      **ssh ec2-user@x.x.x.xx**
      
      where x.x.x.xx represents IP address of private EC2 instance where the actual service is hosted.
-     once you login to Private EC2 instance (e.g.AS400CommonAPiForMyVpc)successfully Now properties should be updated
-     go to /opt/as400-common-api/config/ and edit application-dev.properties file with below properties:
-     
-     |Key Description|	Key Value|
-     |---|---|
-     |AS/400 Server Connection Configuration	|connectionName=test-connection<br>endpoint=as400.infoviewsystems.com<br>userid=MULEDEV<br>password=MULEDEV12<br>libraryList=AWSDEMOS,WTF400DEV<br>secureConnection=false<br>licenseUrl=file:c:/temp/as400-license.lic<br>truststorePassword=ENC(cWuIRE7sMAIFguybAoTBiThjx1onRm5D)<br>tlsIsInsecure=false<br>tlsKeystoreConfigured=true<br>licenseFileProtocol=S3<br>truststoreFileProtocol=S3<br>sns.topic.arn=arn:aws:sns:us-east-2:390270449620:InfoViewDQTopic<br>aws.accessKey=ENC(2z2fc5logEwsazSIyX4lIHlXnVof5tv806d+CmiuaFk=)<br>aws.secretKey=ENC(qHQgp3CjTku3NJ0HcklsPsgbfj7JMuFvj2ZE/QkHYm5flr0wzgpYPqQCAnhPP+KKYxGbR/z+msk=)<br>aws.region=us-east-2|
-                                        
-
-
-      
+     once you login to Private EC2 instance (e.g.AS400CommonAPiForMyVpc)successfully. 
+     go to /opt/as400-common-api/config/ if require edit application-dev.properties file.
+  
      To know the application status: sudo service as400-common-api-service status
      
      To stop the application: sudo service as400-common-api-service stop
@@ -229,7 +222,7 @@ AWS user account with appropriate roles for managing EC2 instances, AWS API Gate
         1. From within the Gateway API
         2. Externally
     
- All APIs created can be tested with in the configuration editor. Please refer sample-test-case-payloads.txt for test payloads.
+ All APIs created can be tested with in the configuration editor. Please refer postman collection attached in quickestart guide section for test payloads.
     
     
 
@@ -237,17 +230,28 @@ The following table depicts Gateway API interface mapping to AS400 Connector Ser
 
 | API Interface Name | Integration Type | Use Proxy Integration | Method | Endpoint URL|
 | --- | --- | --- | --- | --- |
-|/connections | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections](http://x.x.x.xxx:8080/connections) |
-| /connections/{connection-name} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/connections/{connection-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D) |
-| /connections/{connection-name} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/connections/{connection-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D) |
-| /connections/{connection-name} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/connections/{connection-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D) |
-| /connections/{connection-name}/command | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/command-call](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/command-call) |
+|/admin/encryption | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/encryption](http://x.x.x.xxx:8080/admin/encryption) |
+|/admin/connections | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections](http://x.x.x.xxx:8080/admin/connections) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/%7Bconnection-name%7D) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/%7Bconnection-name%7D) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/%7Bconnection-name%7D) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/{connection-name} |
+|/admin/connections/{connection-name}/dqpoller | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller) |
+|/admin/connections/{connection-name}/dqpoller | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller) |
+|/admin/connections/{connection-name}/dqpoller/{pollerName} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}) |
+|/admin/connections/{connection-name}/dqpoller/{pollerName} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}) |
+|/admin/connections/{connection-name}/dqpoller/{pollerName} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}) |
+|/admin/connections/{connection-name}/program-calls | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls) |
+|/admin/connections/{connection-name}/program-calls | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls) |
+|/admin/connections/{connection-name}/program-calls/{programName} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}) |
+|/admin/connections/{connection-name}/program-calls/{programName} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}) |
+|/admin/connections/{connection-name}/program-calls/{programName} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}) |
+|/api/connections/{connection-name}/command-call | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/command-call](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/command-call) |
 | /connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
-| /connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | VPC Link | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
-| /connections/{connection-name}/invoke-program-call/{library-name}/{program-name} | Lambda | -na- | POST | Lambda Region: us-east-2Name of the Lambda function: InputTransformation |
-| connections/{connection-name}/program-call/{library-name}/{program-name} | VPC Link | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/program-call/{library-name}/{program-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/program-call/%7Blibrary-name%7D/%7Bprogram-name%7D) |
-| /connections/{connection-name}/close | VPC link | Keep it deselected | POST |http:// x.x.x.xxx:8080/connections/{connection-name}/close |
-| /connections/{connection-name}/reopen | VPC link | Keep it deselected | POST | http:// x.x.x.xxx:8080/connections/{connection-name}/reopen |
+|/api/connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | VPC Link | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
+|/api/connections/{connection-name}/invoke-program-call/{library-name}/{program-name} | Lambda | -na- | POST | Lambda Region: us-east-2Name of the Lambda function: InputTransformation |
+|/api/connections/{connection-name}/program-call/{program-name} | VPC Link | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/program-call/{program-name}](http://x.x.x.xxx:8080/connections/{connection-name}/program-call/{program-name}) |
+
 
 **Note:** Here x.x.x.xxx is the IP address of the EC2 private instance, 8080 is the port on which AS400 Connector Service API is running.
 
