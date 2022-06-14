@@ -28,7 +28,6 @@ select method as POST
 URL:  http://{Host}:{Port}/admin/connections/test-connection
 
 Where Host: public Ip of EC2 instance
-
       port: on which application is running(ex: 8080)
 	  
 Set Authentication to Basic Auth with below credentials:
