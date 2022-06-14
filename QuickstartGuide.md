@@ -2,9 +2,9 @@
 
 Steps to launch AMI:
 
-1.Login to AWS account&rarr;Click on Launch instances&rarr;enter name (e.g. CommonAPI)
-2.Search for “AS400” or “iSeries” or “IBM i” on AWS Marketplace and find Infoview’s AWSGateway product / AMI.
-3.Select AMI from marketplace & Instance type&rarr;Click on create new key pair&rarr;In security group allow access to port 8080&rarr;Finally click on launch instance.
+1. Login to AWS account&rarr;Click on Launch instances&rarr;enter name (e.g. CommonAPI)
+2. Search for “AS400” or “iSeries” or “IBM i” on AWS Marketplace and find Infoview’s AWSGateway product / AMI
+3. Select AMI from marketplace & Instance type&rarr;Click on create new key pair&rarr;In security group allow access to port 8080&rarr;Finally click on launch instance
 
 Login to created EC2 instance and run the below command
 sudo service as400-common-api-service start 
