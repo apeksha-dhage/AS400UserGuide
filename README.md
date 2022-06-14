@@ -200,8 +200,7 @@ AWS user account with appropriate roles for managing EC2 instances, AWS API Gate
     If everything seems to be ok then we can see the below image
     
 
-![image](https://user-images.githubusercontent.com/88314020/165258740-72c9a19d-9108-414c-810e-139fd6dac32c.png)
-
+![image](https://user-images.githubusercontent.com/46368616/173518986-52640b62-467a-4e4d-8916-77ce73c55493.png)
 
 
 
