@@ -28,7 +28,8 @@ select method as POST
 URL:  http://{Host}:{Port}/admin/connections/test-connection
 
 Where Host: public Ip of EC2 instance
-      port: on which application is running(ex: 8080)
+
+port: on which application is running(ex: 8080)
 	  
 Set Authentication to Basic Auth with below credentials:
 
@@ -147,9 +148,31 @@ expected response:
                 "message": "Connection: 'test-connection' created."
               }
 
+Make sure you have created test-connection and its started
 
+2. Get all existing connections
+    
+   select method as GET
 
+URL:  http://{Host}:{Port}/admin/connections
 
+Where Host: public Ip of EC2 instance
+
+port: on which application is running(ex: 8080)
+	  
+Set Authentication to Basic Auth with below credentials:
+
+Username: Admin
+
+Password: Password
+
+expected response:
+
+[
+                {
+                   
+                }
+            ]
 
 
 
