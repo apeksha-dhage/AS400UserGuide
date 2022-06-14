@@ -325,7 +325,7 @@ Click on Lambda service&rarr;click on create function&rarr;Choose one of the fol
     1. Search and click on Lambda function from within the AWS console, Lambda dashboard gets displayed
     2. Click on Functions and can see the below available functions
       1. InputTransformation: Transforms Input json payload to as/400 compatible format
-      2. DQSNSEventProcessor: AS/400 DTA Queue SNS Lambda Integration
+      2. DQSNSEventProcessor: AS/400 DATA Queue SNS Lambda Integration
     2. To view logs pertaining to Lambda Functions DQSNSEventProcessor
       1. Click on DQSNSEventProcessor, Displays dashboard with configuration, Permission and Monitoring
       2. Click on Monitoring tab, it shows Monitoring dashboard along with the CloudWatch metrics. Click on View logs in CloudWatch. This is the path where logs can be         found.
