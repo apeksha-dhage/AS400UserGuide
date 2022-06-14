@@ -206,7 +206,7 @@ AWS user account with appropriate roles for managing EC2 instances, AWS API Gate
 
 
 
- 3.Map API Gateway Interfaces with Service API interfaces and Lambda functions using HTTP and VPCLink.  
+ 3.Map API Gateway Interfaces with Service API interfaces and VPCLink and map headers as defined in postman collection refered from quickstart guide section.
     
  4.Create a Test Stage environment to deploy APIs
  
