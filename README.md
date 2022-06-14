@@ -1,18 +1,3 @@
-# Quickstart Guide
-
-Steps to launch AMI:
-
-Login to AWS account&rarr;Click on Launch instances&rarr;enter name (e.g. CommonAPI)&rarr;Select AMI from marketplace & Instance type&rarr;Click on create new key pair&rarr;In security group allow access to port 8080&rarr;Finally click on launch instance.
-
-Login to created EC2 instance and run the below command
-sudo service as400-common-api-service start 
-
-Make sure with the below command application is running or not
-tail -n 200 /var/log/as400-common-api-service.log
-
-Get trial with tool through postman 
-
-
 
 # Introduction
 
