@@ -258,17 +258,26 @@ The following table depicts Gateway API interface mapping to AS400 Connector Ser
 
 | API Interface Name | Integration Type | Use Proxy Integration | Method | Endpoint URL|
 | --- | --- | --- | --- | --- |
-|/connections | HTTP | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections](http://x.x.x.xxx:8080/connections) |
-| /connections/{connection-name} | HTTP | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/connections/{connection-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D) |
-| /connections/{connection-name} | HTTP | Keep it deselected | GET | [http://x.x.x.xxx:8080/connections/{connection-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D) |
-| /connections/{connection-name} | HTTP | Keep it deselected | PUT | [http://x.x.x.xxx:8080/connections/{connection-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D) |
-| /connections/{connection-name}/command | HTTP | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/command-call](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/command-call) |
-| /connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | HTTP | Keep it deselected | GET | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
-| /connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | HTTP | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
-| /connections/{connection-name}/invoke-program-call/{library-name}/{program-name} | Lambda | -na- | POST | Lambda Region: us-east-2Name of the Lambda function: InputTransformation |
-| connections/{connection-name}/program-call/{library-name}/{program-name} | HTTP | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/program-call/{library-name}/{program-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/program-call/%7Blibrary-name%7D/%7Bprogram-name%7D) |
-| /connections/{connection-name}/close | HTTP | Keep it deselected | POST |http:// x.x.x.xxx:8080/connections/{connection-name}/close |
-| /connections/{connection-name}/reopen | HTTP | Keep it deselected | POST | http:// x.x.x.xxx:8080/connections/{connection-name}/reopen |
+|/admin/encryption | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/encryption](http://x.x.x.xxx:8080/admin/encryption) |
+|/admin/connections | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections](http://x.x.x.xxx:8080/admin/connections) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/%7Bconnection-name%7D) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/%7Bconnection-name%7D) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/%7Bconnection-name%7D) |
+|/admin/connections/{connection-name} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/admin/connections/{connection-name}](http://x.x.x.xxx:8080/admin/connections/{connection-name})|
+|/admin/connections/{connection-name}/dqpoller | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller) |
+|/admin/connections/{connection-name}/dqpoller | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller) |
+|/admin/connections/{connection-name}/dqpoller/{pollerName} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}) |
+|/admin/connections/{connection-name}/dqpoller/{pollerName} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}) |
+|/admin/connections/{connection-name}/dqpoller/{pollerName} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/dqpoller/{pollerName}) |
+|/admin/connections/{connection-name}/program-calls | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls) |
+|/admin/connections/{connection-name}/program-calls | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls) |
+|/admin/connections/{connection-name}/program-calls/{programName} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}) |
+|/admin/connections/{connection-name}/program-calls/{programName} | VPC Link  | Keep it deselected | PUT | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}) |
+|/admin/connections/{connection-name}/program-calls/{programName} | VPC Link  | Keep it deselected | DELETE | [http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}](http://x.x.x.xxx:8080/admin/connections/{connection-name}/program-calls/{programName}) |
+|/api/connections/{connection-name}/command-call | VPC Link  | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/command-call](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/command-call) |
+|api/connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | VPC Link  | Keep it deselected | GET | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
+|/api/connections/{connection-name}/data-queue/{library-name}/{data-queue-name} | VPC Link | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/data-queue/{library-name}/{data-queue-name}](http://10.0.1.233:8080/connections/%7Bconnection-name%7D/data-queue/%7Blibrary-name%7D/%7Bdata-queue-name%7D) |
+|/api/connections/{connection-name}/program-call/{program-name} | VPC Link | Keep it deselected | POST | [http://x.x.x.xxx:8080/connections/{connection-name}/program-call/{program-name}](http://x.x.x.xxx:8080/connections/{connection-name}/program-call/{program-name}) |
 
 **Note:** Here x.x.x.xxx is the IP address of the EC2 public instance, 8080 is the port on which AS400 Connector Service API is running.
 
@@ -308,12 +317,7 @@ Following table contains the properties related to protocols requires to be conf
  
 **Steps to create lambda function**
 
-1.Create a Lambda function i.e., InputTransformation and deploy (upload Jar), which transforms raw input json payload to as/400 compatible format and invokes the Program call API with this converted payload
-
-Click on Lambda service&rarr;click on create function&rarr;Choose one of the following options to create your function.(e.g.Author From Scratch)&rarr;provide name(e.g. InputTransformation)&rarr;select runtime(e.g. java 8 on Amazon Linux 1)&rarr;select architecture(ex.x86_64)&rarr;permissions default&rarr;click on create function button&rarr;click on upload from&rarr;select .zip or .jar file and upload the jar.
-If wants to test the created Lamda function go to test tab&rarr;create test event provide data and test it
-
-2.Create a Lambda function i.e. DQSNSEventProcessor, deploy (upload Jar) and subscribe to SNS topic
+1.Create a Lambda function i.e. DQSNSEventProcessor, deploy (upload Jar) and subscribe to SNS topic
 
 Click on Lambda service&rarr;click on create function&rarr;Choose one of the following options to create your function.(e.g.Author From Scratch)&rarr;provide name(e.g. DQSNSEventProcessors)&rarr;select runtime(e.g. java 8 on Amazon Linux 1)&rarr;select architecture(ex.x86_64)&rarr;permissions default&rarr;click on create function button&rarr;click on upload from &rarr;select .zip or .jar file and upload the jar.
 
