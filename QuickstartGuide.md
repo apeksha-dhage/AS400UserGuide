@@ -169,11 +169,47 @@ Password: Password
 expected response:
 
 [
-                {
-                   
-                }
-            ]
-
+    {
+        "id": 1,
+        "name": "test",
+        "endpoint": "as400.infoviewsystems.com",
+        "userId": "MULEDEV",
+        "password": "oOvb+ffEwDt2ymQSfZwQRdAMb2plY4cgaPh4mqCT+wyJnTi5uZ0XByMLfEaEsWF6Qw==",
+        "libraryList": "AWSDEMOS,WTF400DEV",
+        "licenseUrl": "FILE:C:\\Users\\isipl\\license\\as400-license.lic",
+        "operationType": 2,
+        "cleanupInterval": 2,
+        "maxConnections": 5,
+        "maxInactivity": 10,
+        "maxlifeTime": 60000,
+        "maxUseCount": 10,
+        "maxUseTime": 30000,
+        "pretestConnections": true,
+        "runMaintenance": false,
+        "threadUsed": false,
+        "keepAlive": true,
+        "loginTimeout": 0,
+        "receiveBufferSize": 1000,
+        "sendBufferSize": 1000,
+        "soLinger": 0,
+        "soTimeout": 0,
+        "tcpNoDelay": false,
+        "libraryName": "AWSDEMOS,WTF400DEV",
+        "keyedDataQueueName": null,
+        "nonKeyedDataQueueName": null,
+        "dataQueueEntry": null,
+        "dataQueueKey": null,
+        "secureConnection": false,
+        "status": "OPEN",
+        "tlsIsInsecure": false,
+        "tlsTruststoreConfigured": true,
+        "tlsKeystoreConfigured": true,
+        "truststorePassword": "rIVt/A36BQnchBB9V0luuVOdxxivrAEfb5nDMA75JGVhQOyTWHkOrz5qNrnv6ZIb7TE=",
+        "truststoreFileProtocol": "FILE",
+        "ccsid": 0,
+        "isap": ""
+    }
+]
 
 
 
