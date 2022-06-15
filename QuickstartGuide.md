@@ -21,6 +21,7 @@
 ## API Test
 
 Now, application is ready to go for trial through postman
+
 Please refer the above atached link for postman collection to test API's
 
 1. Before creating connections require to encrypt the passwords using Encryption API.
