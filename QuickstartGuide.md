@@ -33,9 +33,11 @@ Please refer the above atached link for postman collection to test API's
 7. To poll data from dataQ contineously requires active pollers which will listen dataQ contineously and send notifications to SNS topic
    register and start poller using Register Dq Poller API 
 8. Publish some data to dataQ by using Publish message into data queue API 
+
    ex. {
 	"dataQueueEntry": "Hiiiiiii"
       }
+      
 9. If you subscribe the SNS topic using any of the client ex. Lamda, email,SQS ... will be able to see publish messages 
 
 
