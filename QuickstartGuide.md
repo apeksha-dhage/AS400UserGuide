@@ -67,8 +67,12 @@ IN this section test the API one by one.
    
    
 1. Configuring new IBM i connection
-configure new IBM i connection and establish connection with IBM i server
-using 
+
+ call create connection api provided to establish the connection with IBM i(AS400) server.
+ refer the below screenshot to configure connection. for requst body refer the swagger documentation link which is given below
+ 
+ ![image](https://user-images.githubusercontent.com/46368616/174232507-de7a3294-ebbc-4301-8360-33590d78c704.png)
+
 
 
 
