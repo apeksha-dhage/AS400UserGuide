@@ -95,7 +95,10 @@ IN this section test the API one by one.
  
  **License Management:**
 
-The IBM i connector requires a license file &quot;as400-license.lic&quot; from Infoview to enable access to specific IBM i system(s).
+IBM i connector will allow users to access API's only for first 15 minutes from the AMI launch. 
+The IBM i connector requires a license file &quot;as400-license.lic&quot; from Infoview to enable access to specific IBM i system(s). 
+please conctact to infoview systems Inc.
+
 
 Managing license in different ways by using different protocols such as S3, HTTP/HTTPS, FTP, FILE, SMB etc. and accessing it through these protocols in application needs to be configure required properties while creating connection with IBM i server.
 
@@ -118,7 +121,6 @@ Following table contains the properties related to protocols requires to be conf
 | 2 | HTTP/HTTPS | http.url=url-URL<br>http.dir.path=license-file-path<br>http.username=username</br>http.password=encrypted-pwd
 | 3 | FTP | ftp.host=ftp-host<br>ftp.dir.path=path<br>ftp.username=username<br>ftp.password=encrypted-pwd
 | 4 | FILE/SMB | file.Path=path-to-license-file|
-
 
 3. Validate the connection is created or not
 
