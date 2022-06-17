@@ -38,6 +38,11 @@ Here, two types of API's are there
   
   Password = Password
   
+  Please refer the screenshot.
+  
+  ![image](https://user-images.githubusercontent.com/46368616/174233236-158b6ee1-7e99-4d0a-a115-239e09759fac.png)
+
+  
   
 3. functional API
 
@@ -53,6 +58,11 @@ Here, two types of API's are there
   Username = User
   
   Password = Password@123
+  
+  please refer screenshot
+  
+  ![image](https://user-images.githubusercontent.com/46368616/174233363-371e6141-dc64-4cf9-916b-221526e7f716.png)
+
 
 ## API Test
 
@@ -66,16 +76,20 @@ IN this section test the API one by one.
 
    
    
-1. Configuring new IBM i connection
+1. Configuring new IBM i(AS400) connection
 
- call create connection api provided to establish the connection with IBM i(AS400) server.
+ Call create connection api provided to establish the connection with IBM i(AS400) server.
  refer the below screenshot to configure connection. for requst body refer the swagger documentation link which is given below
  
  ![image](https://user-images.githubusercontent.com/46368616/174232507-de7a3294-ebbc-4301-8360-33590d78c704.png)
 
 
+3. Validate the connection is created or not
 
-
+  Call get all connection api it will hep to confom connection is created or not, if created response will be array of objects(i.e [{}]) otherwise it will give 
+  empty array(i.e []). Plaese refer the below screenshot.
+  
+  
 
 
 
