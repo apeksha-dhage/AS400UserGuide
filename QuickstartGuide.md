@@ -81,13 +81,17 @@ IN this section test the API one by one.
  Call create connection api provided to establish the connection with IBM i(AS400) server.
  refer the below screenshot to configure connection. for requst body refer the swagger documentation link which is given below
  
- ![image](https://user-images.githubusercontent.com/46368616/174232507-de7a3294-ebbc-4301-8360-33590d78c704.png)
+ ![image](https://user-images.githubusercontent.com/46368616/174233922-e532c674-8ccc-4a3e-ad9c-1423e305adba.png)
+
 
 
 3. Validate the connection is created or not
 
   Call get all connection api it will hep to confom connection is created or not, if created response will be array of objects(i.e [{}]) otherwise it will give 
-  empty array(i.e []). Plaese refer the below screenshot.
+  empty array(i.e []). Plaese refer the below screenshot. to see complete response content please refer the swagger documentaion link which is given below
+  
+  ![image](https://user-images.githubusercontent.com/46368616/174234062-8fc6b433-6a28-430a-8cbf-7f6c61ea345b.png)
+
   
   
 
