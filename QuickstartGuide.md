@@ -31,7 +31,7 @@ Here, two types of API's are there
     
        API related to Program call will help you to register program call with applications so that it will be active before calling the functional api for program            call and manage other operations like UPDATE,DELETE and GET program call. 
        
-   There is a feature called Authentication so while accessing Admin related API's through postman client before calling API, please select Aunthentication as a 
+  There is a feature called Authentication so while accessing Admin related API's through postman client before calling API, please select Aunthentication as a 
   "Basic Auth" then it will ask for credentials i.e Username and Password provide below credentials.
   
   Username = Admin
