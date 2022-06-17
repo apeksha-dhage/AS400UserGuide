@@ -93,7 +93,58 @@ IN this section test the API one by one.
   ![image](https://user-images.githubusercontent.com/46368616/174234062-8fc6b433-6a28-430a-8cbf-7f6c61ea345b.png)
 
   
+ 4. Register the program call through Admin API
+    Frist admin will register the program call through register program call api so that program will be active.
+    please refer the below screenshot.For requst body refer swagger documentation link which is given below.
+    
+    ![image](https://user-images.githubusercontent.com/46368616/174235493-46b741b8-56ff-4ffe-b03d-180afdd59190.png)
+
+    
+  5. Call Program call functional API 
+   
+   In previous step program has been already register if wants to conform call get all program admin api
+   please refer the below screenshot.
+   
+   ![image](https://user-images.githubusercontent.com/46368616/174235989-4fbcf89c-6c1c-46a9-b01f-e54dc705af69.png)
+   
+   
+   if response looks like the above screenshot response body,considering as program is in active state
+   
+   Now, call the program call functional API, It will execute program in IBM i(AS400) server and return response back.
+   
+   please refer the below screenshot.
+   
+   ![image](https://user-images.githubusercontent.com/46368616/174236761-add4c6a3-c1ec-48b2-a527-892ee5a52867.png)
+   
+   
+  6. Register Poller through admin poller API
   
+  Before publishing data to DATAQ will start poller to poll/listen DATAQ contineously amd send that data to SNS topic.
+  to register and start poller call admin api it will register and start polling as well.
+  please refer the below screenshot.
+  
+  ![image](https://user-images.githubusercontent.com/46368616/174238642-0b2688ff-bfbd-4347-afca-91607b8b36b7.png)
+  
+ Validate once the poller has been registered or not using get All registered poller admin api.
+ please refer the screenshot.
+ 
+ ![image](https://user-images.githubusercontent.com/46368616/174239084-e6f4e430-bcba-4556-9231-7a226a6a22af.png)
+
+
+  Observe the response body from from above screenshot showing status as active.
+  
+  7. Publish data to DATAQ
+  Call functional API to publish data to DATAQ so that already register poller for same DATAq will listen it contineously.
+  Please refer ther screenshot.
+  
+  ![image](https://user-images.githubusercontent.com/46368616/174239819-2defb71d-d27e-4b28-a748-4c33c3693b04.png)
+
+
+  8.SNS topic Subscription
+  
+  using Lambda function subscribe SNS topic, able see latest published data to DATAQ
+  
+  ![image](https://user-images.githubusercontent.com/46368616/174241965-e2caf8ba-063e-46d3-9624-a36750fa43cc.png)
 
 
 
@@ -111,24 +162,8 @@ IN this section test the API one by one.
 
 
 
-Now, application is ready to go for trial through postman
 
-Please refer the above atached link for postman collection to test API's
 
-1. Before creating connections require to encrypt the passwords using Encryption API.
-2. Establish new connection with IBM i(AS400) server using create connection API from postman collection.
-3. Make sure the connection created and started using Get All Connection API.
-4. Before calling program for IBM i(AS400) It shoud be ready to call use Register Program Call API and register program.
-5. Validate the program is ready or not using Get All Registered Program API if you see that program in response, now we are ready to call functional API.
-6. Now call the program to add record entry in IBM i(AS400) using Execute program Call API from functional resources.
-7. To poll data from dataQ contineously requires active pollers which will listen dataQ contineously and send notifications to SNS topic
-   register and start poller using Register Dq Poller API 
-8. Publish some data to dataQ by using Publish message into data queue API 
 
-   ex. {
-	"dataQueueEntry": "Hiiiiiii"
-      }
-      
-9. If you subscribe the SNS topic using any of the client ex. Lamda, email,SQS ... will be able to see publish messages 
 
 
