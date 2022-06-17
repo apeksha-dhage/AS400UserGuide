@@ -35,6 +35,7 @@ Here, two types of API's are there
   "Basic Auth" then it will ask for credentials i.e Username and Password provide below credentials.
   
   Username = Admin
+  
   Password = Password
   
   
@@ -50,6 +51,7 @@ Here, two types of API's are there
   To access functional API through postman client select Authentication as "Basic Auth" and provide below credentials.
   
   Username = User
+  
   Password = Password@123
 
 ## API Test
