@@ -177,7 +177,7 @@ Following table contains the properties related to protocols requires to be conf
 
   8.SNS topic Subscription
   
-  using Lambda function subscribe SNS topic, able see latest published data to DATAQ
+  Able to see latest published data retrieved from DATAQ in any subscribe channel.
   
   ![image](https://user-images.githubusercontent.com/46368616/174241965-e2caf8ba-063e-46d3-9624-a36750fa43cc.png)
 
