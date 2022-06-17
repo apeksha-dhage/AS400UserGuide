@@ -78,6 +78,15 @@ IN this section test the API one by one.
    
 1. Configuring new IBM i(AS400) connection
 
+IBM i Prerequisites
+
+- IBM i OS version:V5R4 and higher
+- AWS VPC where the AMI is running must be able to reach the IBM i servers on ports 446, 449, 8470, 8472,8473,8475 and 8476 for non-SSL communications, and ports 448, 449, 9470, 9472, 9473, 9475 and 9476 accessible for SSL communications.
+- IBM i must have **\*CENTRAL, \*DTAQ, \*RMTCMD, \*SIGNON and \*SRVMAP** host servers running in the QSYSWRK subsystem
+- If secure TLS connection is used, the TLS certificate must be applied to Central, Data Queue, Remote Command, File, Signon, and DDM / DRDA services in Digital Certificate Manager
+- IBM i user ID must be authorized to perform the operations on the intended IBM i objects
+- If there&#39;s an additional security software that locks down the remote execution functionality, the IBM i user ID defined for connector configuration must be allowed to execute remote calls and access database, IFS and DDM services
+
  Call create connection api provided to establish the connection with IBM i(AS400) server.
  refer the below screenshot to configure connection. for requst body refer the swagger documentation link which is given below
  
