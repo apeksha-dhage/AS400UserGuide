@@ -16,31 +16,46 @@
 Here, two types of API's are there
 1. Admin API
     1. Encryption API
+    
         This API will allow to encrypt the sensative data like passwords and ather secrets.
+	
     3. Connections API
+    
         API related to Connections will help you register and establish connection with IBM i(AS400) server and you can manage all operations like UPDATE,DELETE and           GET connection.
+	
     3. DataQ Poller API
+    
        API related to DataQ poller will help you register and managing pollers to read data contineously from DATAQ and push to SNS topic and manage other operation          like UPDATE,DELETE and GET pollers.
+       
     4. Program Call API
+    
        API related to Program call will help you to register program call with applications so that it will be active before calling the functional api for program            call and manage other operations like UPDATE,DELETE and GET program call. 
-  There is a feature called Authentication so while accessing Admin related API's through postman client before calling API, please select Aunthentication as a 
+       
+   There is a feature called Authentication so while accessing Admin related API's through postman client before calling API, please select Aunthentication as a 
   "Basic Auth" then it will ask for credentials i.e Username and Password provide below credentials.
+  
   Username = Admin
   Password = Password
   
   
 3. functional API
+
    As a part of functional call API, provided four API to get result from IBM i(AS400) server.
+   
    1. Execute Command Call API
-   2. Publish Data To DATAQ API
-   3. Execute Program CAll API
-   4. Read Data From DATAQ API
-  To access functional API through postman client select Authentication as "Basic Auth" and provide below credentials
+   3. Publish Data To DATAQ API
+   4. Execute Program CAll API
+   5. Read Data From DATAQ API
+   
+  To access functional API through postman client select Authentication as "Basic Auth" and provide below credentials.
+  
   Username = User
   Password = Password@123
 
 ## API Test
+
 IN this section test the API one by one.
+
 1. Before establishing the connection with IBM I(AS400) server go for encryption which will help to secure data that is passwords and other secrets.
    this connector apploication will provide the feature called encryption and there is a API called to encrypt the password and other secret.
    please  refre the screenshot.
