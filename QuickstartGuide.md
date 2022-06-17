@@ -17,7 +17,7 @@ Here, two types of API's are there
 1. Admin API
     1. Encryption API
     
-        This API will allow to encrypt the sensative data like passwords and ather secrets.
+        This API will allow to encrypt the sensative data like passwords and other secrets.
 	
     3. Connections API
     
