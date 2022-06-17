@@ -83,7 +83,7 @@ IN this section test the API one by one.
  
  ![image](https://user-images.githubusercontent.com/46368616/174233922-e532c674-8ccc-4a3e-ad9c-1423e305adba.png)
  
- if secureConnection property set as true then below are the mandatory cofiguration needs to be provided
+ if secureConnection property set as true then below are the mandatory cofiguration needs to be provided and truststore file related information as well, refer from     below license management section
  
  "truststorePassword":"rIVt/A36BQnchBB9V0luuVOdxxivrAEfb5nDMA75JGVhQOyTWHkOrz5qNrnv6ZIb7TE="
  
