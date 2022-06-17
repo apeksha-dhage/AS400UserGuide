@@ -115,7 +115,7 @@ Following table contains the properties related to protocols requires to be conf
 | **#** | **Protocol Name** | **Properties** |
 | --- | --- | --- |
 | 1 | S3 | s3.bucket=path-to-bucket<br>s3.region=us-east-2<br>s3.accessKey=access-key<br>s3.secretKey=secret-key|
-| 2 | HTTP/HTTPS | http.url=url-URL<br>http.dir.path=license-file-path<br>http.username=username</br>http.password=encrypted-pwd)
+| 2 | HTTP/HTTPS | http.url=url-URL<br>http.dir.path=license-file-path<br>http.username=username</br>http.password=encrypted-pwd
 | 3 | FTP | ftp.host=ftp-host<br>ftp.dir.path=path<br>ftp.username=username<br>ftp.password=encrypted-pwd
 | 4 | FILE/SMB | file.Path=path-to-license-file|
 
