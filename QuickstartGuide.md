@@ -86,26 +86,30 @@ IN this section test the API one by one.
  if secureConnection property set as true then below are the mandatory cofiguration needs to be provided
  
  "truststorePassword":"rIVt/A36BQnchBB9V0luuVOdxxivrAEfb5nDMA75JGVhQOyTWHkOrz5qNrnv6ZIb7TE="
+ 
  "tlsIsInsecure":"false"
+ 
  "tlsKeystoreConfigured":"true"
+ 
  "tlsTruststoreConfigured":"true"
  
  **License Management:**
 
 The IBM i connector requires a license file &quot;as400-license.lic&quot; from Infoview to enable access to specific IBM i system(s).
 
-Managing license in different ways by using different protocols such as S3, HTTP/HTTPS, FTP, FILE, SMB etc. and accessing it through these protocols in our application needs to configure required properties in **application-dev.properties** file.
+Managing license in different ways by using different protocols such as S3, HTTP/HTTPS, FTP, FILE, SMB etc. and accessing it through these protocols in application needs to be configure required properties while creating connection with IBM i server.
 
-Available Protocols to load license file/truststore file (HTTP,HTTPS, FTP, SMB, S3, FILE, CLASSPATH_)_
+Available Protocols to load license file/truststore file (HTTP,HTTPS, FTP, SMB, S3, FILE, CLASSPATH)
 
-what protocol used to load license file/truststore file that need to be configured as below in application-dev.properties file as below.
+what protocol used to load license file/truststore file that need to be configured with create connection api as a request body.
 
-licenseFileProtocol=S3
+ex. licenseFileProtocol=S3
 
-Truststore file is used to establish the secure connection with IBM i AS400 system. if secure connection property set as true then needs to configure truststore file protocol in application-dev.properties file as below.
+Truststore file is used to establish the secure connection with IBM i AS400 system. if secure connection property set as true then needs to be configure truststore file prococol.
 
-truststoreFileProtocol=S3
+ex. truststoreFileProtocol=S3
 
+If we set licenseFileProtocol and truststoreFileProtocol to S3 then needs to send S3 related properties as shown in below table and in the same way for others.
 Following table contains the properties related to protocols requires to be configure:
 
 | **#** | **Protocol Name** | **Properties** |
@@ -114,9 +118,6 @@ Following table contains the properties related to protocols requires to be conf
 | 2 | HTTP/HTTPS | http.url=url-URL<br>http.dir.path=license-file-path<br>http.username=username</br>http.password=encrypted-pwd)
 | 3 | FTP | ftp.host=ftp-host<br>ftp.dir.path=path<br>ftp.username=username<br>ftp.password=encrypted-pwd
 | 4 | FILE/SMB | file.Path=path-to-license-file|
-
-
-  
 
 
 3. Validate the connection is created or not
