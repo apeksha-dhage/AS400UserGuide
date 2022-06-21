@@ -43,8 +43,7 @@ Here, two types of API's are there
   ![image](https://user-images.githubusercontent.com/46368616/174233236-158b6ee1-7e99-4d0a-a115-239e09759fac.png)
 
   
-  
-3. functional API
+  2. functional API
 
    As a part of functional call API, provided four API to get result from IBM i(AS400) server.
    
