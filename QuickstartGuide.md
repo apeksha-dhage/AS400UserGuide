@@ -2,7 +2,7 @@
 
 ## Environment Setup
 
-1. Login to AWS account&rarr;Click on "Launch Instances"&rarr;enter name (e.g. CommonAPI)
+1. Login to AWS account&rarr;Click on “Launch Instances”&rarr;enter name (e.g. CommonAPI)
 2. Search for “AS400” or “iSeries” or “IBM i” on AWS Marketplace and find Infoview’s AWSGateway product / AMI
 3. Select AMI from marketplace & Instance type&rarr;Click on create new key pair&rarr;In security group allow access to port 8080&rarr;Finally click on launch instance
 4. Verify the launched AMI is working by calling get connections API from below postman collection link
