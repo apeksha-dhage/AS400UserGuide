@@ -19,13 +19,13 @@ Here, two types of API's are there
     
         This API will allow to encrypt the sensative data like passwords and other secrets.
 	
-    3. Connections API
+    2. Connections API
     
         API related to Connections will help you register and establish connection with IBM i(AS400) server and you can manage all operations like UPDATE,DELETE and           GET connection.
 	
     3. DataQ Poller API
     
-       API related to DataQ poller will help you register and managing pollers to read data contineously from DATAQ and push to SNS topic and manage other operation          like UPDATE,DELETE and GET pollers.
+       API related to DataQ poller will help you register and managing pollers to read data Continuously from DATAQ and push to SNS topic and manage other operation          like UPDATE,DELETE and GET pollers.
        
     4. Program Call API
     
@@ -65,11 +65,11 @@ Here, two types of API's are there
 
 ## API Test
 
-IN this section test the API one by one.
+In this section, test the API's one by one
 
 1. Before establishing the connection with IBM I(AS400) server go for encryption which will help to secure data that is passwords and other secrets.
-   this connector apploication will provide the feature called encryption and there is a API called to encrypt the password and other secret.
-   please  refre the screenshot.
+   This connector application will provide the feature called encryption and there is a API called to encrypt the password and other secret.
+   Please refer the screenshot.
    
    ![image](https://user-images.githubusercontent.com/46368616/174231414-a30f82d7-79f5-4e90-8515-dd3a005731eb.png)
 
@@ -86,8 +86,8 @@ IBM i Prerequisites
 - IBM i user ID must be authorized to perform the operations on the intended IBM i objects
 - If there&#39;s an additional security software that locks down the remote execution functionality, the IBM i user ID defined for connector configuration must be allowed to execute remote calls and access database, IFS and DDM services
 
- Call create connection api provided to establish the connection with IBM i(AS400) server.
- refer the below screenshot to configure connection. for requst body refer the swagger documentation link which is given below
+ Call create connection api provided to establish the connection with IBM i(AS400) server.Refer the below screenshot to configure connection.
+ For request body refer to the swagger documentation link which is given below
  
  ![image](https://user-images.githubusercontent.com/46368616/174233922-e532c674-8ccc-4a3e-ad9c-1423e305adba.png)
  
@@ -105,14 +105,16 @@ IBM i Prerequisites
 
 IBM i connector will allow users to access API's only for first 15 minutes from the AMI launch. 
 The IBM i connector requires a license file &quot;as400-license.lic&quot; from Infoview to enable access to specific IBM i system(s). 
-please conctact to infoview systems Inc.
+please contact to Infoview Systems Inc.
+
+[Contact us](http://www.infoviewsystems.com/contact-us) for connector pricing info, trial license, or support questions.
 
 
 Managing license in different ways by using different protocols such as S3, HTTP/HTTPS, FTP, FILE, SMB etc. and accessing it through these protocols in application needs to be configure required properties while creating connection with IBM i server.
 
 Available Protocols to load license file/truststore file (HTTP,HTTPS, FTP, SMB, S3, FILE, CLASSPATH)
 
-what protocol used to load license file/truststore file that need to be configured with create connection api as a request body.
+What protocol used to load license file/truststore file that need to be configured with create connection api as a request body.
 
 ex. licenseFileProtocol=S3
 
@@ -132,22 +134,22 @@ Following table contains the properties related to protocols requires to be conf
 
 3. Validate the connection is created or not
 
-  Call get all connection api it will hep to confom connection is created or not, if created response will be array of objects(i.e [{}]) otherwise it will give 
-  empty array(i.e []). Plaese refer the below screenshot. to see complete response content please refer the swagger documentaion link which is given below
+  Call get all connection api it will hep to confirm connection is created or not, if created response will be array of objects(i.e [{}]) otherwise it will give 
+  empty array(i.e []). Please refer the below screenshot.To see complete response content please refer the swagger documentation link which is provided in document.
   
   ![image](https://user-images.githubusercontent.com/46368616/174234062-8fc6b433-6a28-430a-8cbf-7f6c61ea345b.png)
 
   
  4. Register the program call through Admin API
-    Frist admin will register the program call through register program call api so that program will be active.
-    please refer the below screenshot.For requst body refer swagger documentation link which is given below.
+    First admin will register the program call through register program call api so that program will be active.
+    Please refer the below screenshot.For request body refer swagger documentation link which is provided in document.
     
     ![image](https://user-images.githubusercontent.com/46368616/174235493-46b741b8-56ff-4ffe-b03d-180afdd59190.png)
 
     
   5. Call Program call functional API 
    
-   In previous step program has been already register if wants to conform call get all program admin api
+   In previous step program has been already register if wants to confirm call get all program admin api
    please refer the below screenshot.
    
    ![image](https://user-images.githubusercontent.com/46368616/174235989-4fbcf89c-6c1c-46a9-b01f-e54dc705af69.png)
@@ -164,7 +166,7 @@ Following table contains the properties related to protocols requires to be conf
    
   6. Register Poller through admin poller API
   
-  Before publishing data to DATAQ will start poller to poll/listen DATAQ contineously amd send that data to SNS topic.
+  Before publishing data to DATAQ will start poller to poll/listen DATAQ continuously and send that data to SNS topic.
   to register and start poller call admin api it will register and start polling as well.
   please refer the below screenshot.
   
@@ -179,8 +181,8 @@ Following table contains the properties related to protocols requires to be conf
   Observe the response body from from above screenshot showing status as active.
   
   7. Publish data to DATAQ
-  Call functional API to publish data to DATAQ so that already register poller for same DATAq will listen it contineously.
-  Please refer ther screenshot.
+  Call functional API to publish data to DATAQ so that already register poller for same DATAQ will listen it continuously.
+  Please refer to the screenshot.
   
   ![image](https://user-images.githubusercontent.com/46368616/174239819-2defb71d-d27e-4b28-a748-4c33c3693b04.png)
 
