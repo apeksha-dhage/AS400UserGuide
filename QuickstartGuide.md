@@ -199,24 +199,36 @@ Following table contains the properties related to protocols requires to be conf
   
   Call functional API to publish data to DATAQ so that already register poller for same DATAQ will listen it continuously.
   
-  If jobTraceDisabled
+  If jobTrace parameter in used connection is false
   
   ![image](https://user-images.githubusercontent.com/46368616/183827630-3620a3d5-f3b8-4787-855b-70d095dc508e.png)
 
-  If jobTraceEnabled
+  If jobTrace parameter in used connection is true
   
   ![image](https://user-images.githubusercontent.com/46368616/183827789-3f7bd3e8-9708-413d-b5de-0fd985939d6d.png)
 
+  8. Read DataQueue through API
+     
+  Call functional API to listen data queue 
+   
+  If jobTrace parameter in used connection is false
+   
+   ![image](https://user-images.githubusercontent.com/46368616/183864861-2d75523c-10bb-4ef5-b7fe-1cee08f3ea3f.png)
+
+   
+  If jobTrace parameter in used connection is true
+   
+   ![image](https://user-images.githubusercontent.com/46368616/183865232-41bc84dd-3bc7-4336-97a7-7077a1b77b9f.png)
 
 
-  8.SNS topic Subscription
+  9.SNS topic Subscription
   
   Able to see latest published data retrieved from DATAQ in any subscribe channel.
   
   ![image](https://user-images.githubusercontent.com/46368616/174241965-e2caf8ba-063e-46d3-9624-a36750fa43cc.png)
 
 
-
+  
 
 
 
