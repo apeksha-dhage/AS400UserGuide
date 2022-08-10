@@ -168,11 +168,11 @@ Following table contains the properties related to protocols requires to be conf
    
    Now, call the program call functional API, It will execute program in IBM i(AS400) server and return response back.
    
-   please refer the below screenshot if jobTraceDisabled.
+   If jobTrace parameter in used connection is false
    
   ![image](https://user-images.githubusercontent.com/46368616/183826688-7e07f97c-cc28-4a8d-aa5e-769fc8f537b2.png)
   
-   please refer the below screenshot if jobTraceEnabled.
+   If jobTrace parameter in used connection is true
    
   ![image](https://user-images.githubusercontent.com/46368616/183827081-c617bd3b-3191-4f4a-b11c-d12c218cb5a0.png)
 
@@ -226,21 +226,6 @@ Following table contains the properties related to protocols requires to be conf
   Able to see latest published data retrieved from DATAQ in any subscribe channel.
   
   ![image](https://user-images.githubusercontent.com/46368616/174241965-e2caf8ba-063e-46d3-9624-a36750fa43cc.png)
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
