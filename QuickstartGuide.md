@@ -89,7 +89,8 @@ IBM i Prerequisites
  Call create connection api provided to establish the connection with IBM i(AS400) server.Refer the below screenshot to configure connection.
  For request body refer to the swagger documentation link which is given below
  
- ![image](https://user-images.githubusercontent.com/46368616/174233922-e532c674-8ccc-4a3e-ad9c-1423e305adba.png)
+ ![image](https://user-images.githubusercontent.com/46368616/183825994-677e9b16-ddd3-42e0-b06d-0a3b93237d86.png)
+
  
  if secureConnection property set as true then below are the mandatory cofiguration needs to be provided and truststore file related information as well, refer from     below license management section
  
@@ -137,32 +138,40 @@ Following table contains the properties related to protocols requires to be conf
   Call get all connection api it will hep to confirm connection is created or not, if created response will be array of objects(i.e [{}]) otherwise it will give 
   empty array(i.e []). Please refer the below screenshot.To see complete response content please refer the swagger documentation link which is provided in document.
   
-  ![image](https://user-images.githubusercontent.com/46368616/174234062-8fc6b433-6a28-430a-8cbf-7f6c61ea345b.png)
+  ![image](https://user-images.githubusercontent.com/46368616/183826166-85b147b5-50f7-4667-a812-8a6678c59744.png)
+
 
   
  4. Register the program call through Admin API
     First admin will register the program call through register program call api so that program will be active.
     Please refer the below screenshot.For request body refer swagger documentation link which is provided in document.
     
-    ![image](https://user-images.githubusercontent.com/46368616/174235493-46b741b8-56ff-4ffe-b03d-180afdd59190.png)
+    ![image](https://user-images.githubusercontent.com/46368616/183826271-f93c72d2-b0b3-4127-9d84-4580473a3406.png)
+
 
     
-  5. Call Program call functional API 
+  5. Get All registered programs
    
    In previous step program has been already register if wants to confirm call get all program admin api
    please refer the below screenshot.
    
-   ![image](https://user-images.githubusercontent.com/46368616/174235989-4fbcf89c-6c1c-46a9-b01f-e54dc705af69.png)
+   ![image](https://user-images.githubusercontent.com/46368616/183826495-56f9076f-9909-4b5a-b9e4-200e45b99518.png)
+
    
    
    if response looks like the above screenshot response body,considering as program is in active state
    
    Now, call the program call functional API, It will execute program in IBM i(AS400) server and return response back.
    
-   please refer the below screenshot.
+   please refer the below screenshot if jobTraceDisabled.
    
-   ![image](https://user-images.githubusercontent.com/46368616/174236761-add4c6a3-c1ec-48b2-a527-892ee5a52867.png)
+  ![image](https://user-images.githubusercontent.com/46368616/183826688-7e07f97c-cc28-4a8d-aa5e-769fc8f537b2.png)
+  
+   please refer the below screenshot if jobTraceEnabled.
    
+  ![image](https://user-images.githubusercontent.com/46368616/183827081-c617bd3b-3191-4f4a-b11c-d12c218cb5a0.png)
+
+
    
   6. Register Poller through admin poller API
   
@@ -170,21 +179,27 @@ Following table contains the properties related to protocols requires to be conf
   to register and start poller call admin api it will register and start polling as well.
   please refer the below screenshot.
   
-  ![image](https://user-images.githubusercontent.com/46368616/174238642-0b2688ff-bfbd-4347-afca-91607b8b36b7.png)
+  ![image](https://user-images.githubusercontent.com/46368616/183827326-6aafd9c0-1644-4261-b55d-9f284463d02d.png)
+
   
- Validate once the poller has been registered or not using get All registered poller admin api.
- please refer the screenshot.
+  Validate once the poller has been registered or not using get All registered poller admin api.
+  please refer the screenshot.
  
- ![image](https://user-images.githubusercontent.com/46368616/174239084-e6f4e430-bcba-4556-9231-7a226a6a22af.png)
+ ![image](https://user-images.githubusercontent.com/46368616/183827398-e3f94597-c9eb-4ef7-8bcd-ad81ede4e86b.png)
 
 
   Observe the response body from from above screenshot showing status as active.
   
   7. Publish data to DATAQ
   Call functional API to publish data to DATAQ so that already register poller for same DATAQ will listen it continuously.
-  Please refer to the screenshot.
+  Please refer to the screenshot if jobTraceDisabled
   
-  ![image](https://user-images.githubusercontent.com/46368616/174239819-2defb71d-d27e-4b28-a748-4c33c3693b04.png)
+  ![image](https://user-images.githubusercontent.com/46368616/183827630-3620a3d5-f3b8-4787-855b-70d095dc508e.png)
+
+  Please refer to the screenshot if jobTraceEnabled
+  
+  ![image](https://user-images.githubusercontent.com/46368616/183827789-3f7bd3e8-9708-413d-b5de-0fd985939d6d.png)
+
 
 
   8.SNS topic Subscription
