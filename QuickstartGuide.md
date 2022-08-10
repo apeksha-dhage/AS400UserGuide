@@ -69,7 +69,7 @@ In this section, test the API's one by one
 
 1. Before establishing the connection with IBM I(AS400) server go for encryption which will help to secure data that is passwords and other secrets.
    This connector application will provide the feature called encryption and there is a API called to encrypt the password and other secret.
-   Please refer the screenshot.
+   
    
    ![image](https://user-images.githubusercontent.com/46368616/174231414-a30f82d7-79f5-4e90-8515-dd3a005731eb.png)
 
@@ -136,14 +136,17 @@ Following table contains the properties related to protocols requires to be conf
 3. Validate the connection is created or not
 
   Call get all connection api it will hep to confirm connection is created or not, if created response will be array of objects(i.e [{}]) otherwise it will give 
-  empty array(i.e []). Please refer the below screenshot.To see complete response content please refer the swagger documentation link which is provided in document.
+  empty array(i.e []).
+  To see complete response content please refer the swagger documentation link which is provided in document.
   
   ![image](https://user-images.githubusercontent.com/46368616/183826166-85b147b5-50f7-4667-a812-8a6678c59744.png)
 
 
   
  4. Register the program call through Admin API
+ 
     First admin will register the program call through register program call api so that program will be active.
+    
     Please refer the below screenshot.For request body refer swagger documentation link which is provided in document.
     
     ![image](https://user-images.githubusercontent.com/46368616/183826271-f93c72d2-b0b3-4127-9d84-4580473a3406.png)
@@ -153,7 +156,7 @@ Following table contains the properties related to protocols requires to be conf
   5. Get All registered programs
    
    In previous step program has been already register if wants to confirm call get all program admin api
-   please refer the below screenshot.
+   
    
    ![image](https://user-images.githubusercontent.com/46368616/183826495-56f9076f-9909-4b5a-b9e4-200e45b99518.png)
 
@@ -177,13 +180,13 @@ Following table contains the properties related to protocols requires to be conf
   
   Before publishing data to DATAQ will start poller to poll/listen DATAQ continuously and send that data to SNS topic.
   to register and start poller call admin api it will register and start polling as well.
-  please refer the below screenshot.
+  
   
   ![image](https://user-images.githubusercontent.com/46368616/183827326-6aafd9c0-1644-4261-b55d-9f284463d02d.png)
 
   
   Validate once the poller has been registered or not using get All registered poller admin api.
-  please refer the screenshot.
+  
  
  ![image](https://user-images.githubusercontent.com/46368616/183827398-e3f94597-c9eb-4ef7-8bcd-ad81ede4e86b.png)
 
@@ -191,12 +194,14 @@ Following table contains the properties related to protocols requires to be conf
   Observe the response body from from above screenshot showing status as active.
   
   7. Publish data to DATAQ
+  
   Call functional API to publish data to DATAQ so that already register poller for same DATAQ will listen it continuously.
-  Please refer to the screenshot if jobTraceDisabled
+  
+  If jobTraceDisabled
   
   ![image](https://user-images.githubusercontent.com/46368616/183827630-3620a3d5-f3b8-4787-855b-70d095dc508e.png)
 
-  Please refer to the screenshot if jobTraceEnabled
+  If jobTraceEnabled
   
   ![image](https://user-images.githubusercontent.com/46368616/183827789-3f7bd3e8-9708-413d-b5de-0fd985939d6d.png)
 
